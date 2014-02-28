@@ -6,5 +6,6 @@
 //  Copyright (c) 2013 Katalysator AB. All rights reserved.
 //
 
+
 #import "KATBeaconManager.h"
 #import "KATBeaconConfiguration.h"
