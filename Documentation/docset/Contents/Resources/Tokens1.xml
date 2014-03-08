@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/KATBeaconConfiguration.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/KATBeaconConfiguration</TokenIdentifier>
+			<Abstract type="html">A KATBeaconConfiguration object provides the settings for monitoring/ranging of a certain beacon as well as authentication properties against the Katalysator backend.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/setBeaconToken:</TokenIdentifier>
+			<Abstract type="html">UUID for the region/beacon that should be monitored or ranged.
+Contact Katalysator AB for more information on this.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSUUID *beaconToken</Declaration>
+			
+			
+			<Anchor>//api/name/beaconToken</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/beaconToken</TokenIdentifier>
+			<Abstract type="html">UUID for the region/beacon that should be monitored or ranged.
+Contact Katalysator AB for more information on this.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSUUID *beaconToken</Declaration>
+			
+			
+			<Anchor>//api/name/beaconToken</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/KATBeaconConfiguration/beaconToken</TokenIdentifier>
+			<Abstract type="html">UUID for the region/beacon that should be monitored or ranged.
+Contact Katalysator AB for more information on this.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSUUID *beaconToken</Declaration>
+			
+			
+			<Anchor>//api/name/beaconToken</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/setApiToken:</TokenIdentifier>
+			<Abstract type="html">UUID to authenticate against the Katalysator cloud api.
+Contact Katalysator AB for more information on this.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSUUID *apiToken</Declaration>
+			
+			
+			<Anchor>//api/name/apiToken</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/apiToken</TokenIdentifier>
+			<Abstract type="html">UUID to authenticate against the Katalysator cloud api.
+Contact Katalysator AB for more information on this.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSUUID *apiToken</Declaration>
+			
+			
+			<Anchor>//api/name/apiToken</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/KATBeaconConfiguration/apiToken</TokenIdentifier>
+			<Abstract type="html">UUID to authenticate against the Katalysator cloud api.
+Contact Katalysator AB for more information on this.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSUUID *apiToken</Declaration>
+			
+			
+			<Anchor>//api/name/apiToken</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/setPresentingView:</TokenIdentifier>
+			<Abstract type="html">Optionally you can supply a presenting view which will be feeded with the results.
+This property has only effect in certain circumstances:
+- The integrating app needs to be in foreground during the beacon trigger
+- The handlerFilter must be set to KATHandlerFilterView
+- The backend configuration needs to be configured to match these settings</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UIView *presentingView</Declaration>
+			
+			
+			<Anchor>//api/name/presentingView</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/presentingView</TokenIdentifier>
+			<Abstract type="html">Optionally you can supply a presenting view which will be feeded with the results.
+This property has only effect in certain circumstances:
+- The integrating app needs to be in foreground during the beacon trigger
+- The handlerFilter must be set to KATHandlerFilterView
+- The backend configuration needs to be configured to match these settings</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UIView *presentingView</Declaration>
+			
+			
+			<Anchor>//api/name/presentingView</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/KATBeaconConfiguration/presentingView</TokenIdentifier>
+			<Abstract type="html">Optionally you can supply a presenting view which will be feeded with the results.
+This property has only effect in certain circumstances:
+- The integrating app needs to be in foreground during the beacon trigger
+- The handlerFilter must be set to KATHandlerFilterView
+- The backend configuration needs to be configured to match these settings</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UIView *presentingView</Declaration>
+			
+			
+			<Anchor>//api/name/presentingView</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/setHandlerFilter:</TokenIdentifier>
+			<Abstract type="html">KATHandlerFilter allows bit mask callback filtering.
+Since there are many options for different beacons and notification types and opportunities
+it is possible to constrain the types of call backs the integrating app wants to receive data for.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) KATHandlerFilter handlerFilter</Declaration>
+			
+			
+			<Anchor>//api/name/handlerFilter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconConfiguration/handlerFilter</TokenIdentifier>
+			<Abstract type="html">KATHandlerFilter allows bit mask callback filtering.
+Since there are many options for different beacons and notification types and opportunities
+it is possible to constrain the types of call backs the integrating app wants to receive data for.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) KATHandlerFilter handlerFilter</Declaration>
+			
+			
+			<Anchor>//api/name/handlerFilter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/KATBeaconConfiguration/handlerFilter</TokenIdentifier>
+			<Abstract type="html">KATHandlerFilter allows bit mask callback filtering.
+Since there are many options for different beacons and notification types and opportunities
+it is possible to constrain the types of call backs the integrating app wants to receive data for.</Abstract>
+			<DeclaredIn>KATBeaconConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) KATHandlerFilter handlerFilter</Declaration>
+			
+			
+			<Anchor>//api/name/handlerFilter</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
