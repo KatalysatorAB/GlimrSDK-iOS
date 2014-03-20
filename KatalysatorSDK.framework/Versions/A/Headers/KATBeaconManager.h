@@ -10,27 +10,43 @@
 
 
 /**
- * KATAdvertHandler defines the callback for beacon actions
+ * KATAdvertHandler defines the callback for beacon actions.
  *
+ * @since v1.0
  */
 typedef void(^KATAdvertHandler)(id result, NSError *error);
 
 
 /**
- * KATDebugHandler defines the callback for debug calls
+ * KATDebugHandler defines the callback for debug calls.
  *
+ * @since v1.0
  */
 typedef void(^KATDebugHandler)(id result);
 
 
-
+/**
+ 
+ A KATBeaconManager is responsible for the beacon interaction and callbacks to the app that integrates the SDK. In general it should be used as a shared object.
+ 
+ The manager object needs a KATBeaconConfiguration object to initialize the beacon monitoring and ranging with the custom needs. Once the device enters or exits a region a callback to the startWithHandler: block might happen depending on the beacon configuration on the Katalysator Beacon backend. The same goes for entering and existing a individual beacon. Several beacons can be set up in one region and configured on the backend.
+ 
+ The SDK makes use of the CoreLocation framework, specifically the monitoring and ranging of beacons in background and foreground mode.
+ 
+ */
 @interface KATBeaconManager : NSObject
+
+
+////////////////////////////////////////////////////////////////////////////////
+/// @name KATBeaconManager init
+////////////////////////////////////////////////////////////////////////////////
 
 
 /**
  * A shared version of the KATBeaconManager
  *
  * @return an previous instantiated instance of the KATBeaconManager
+ * @since v1.0
  */
 + (instancetype)shared;
 
@@ -38,35 +54,49 @@ typedef void(^KATDebugHandler)(id result);
 /**
  * Inits the KATBeaconManager
  *
- * @return instancetype a KATBeaconManager instance with profile settings
+ * @param configuration trigger configuration
+ *
+ * @return instancetype a KATBeaconManager instance with configuration settings
+ * @since v1.0
  */
 - (instancetype)initWithConfiguration:(KATBeaconConfiguration *)configuration;
 
 
+////////////////////////////////////////////////////////////////////////////////
+/// @name Start on stop of beacon monitoring/ranging
+////////////////////////////////////////////////////////////////////////////////
+
+
 /**
- * Starts monitoring / ranging for beacons and does callbacks
+ * Starts monitoring/ranging for beacons and makes calls to the block callback.
+ * This also depends on the beacon configuration on the backend.
  *
  * @param handler the callback function when a beacon action is fired
  *
  * @return void
+ * @since v1.0
  */
 - (void)startWithHandler:(KATAdvertHandler)handler;
 
 
 /**
- * The handler gets called at different locations to help debugging
+ * The handler gets called at different locations to help debugging.
+ * This also depends on the beacon configuration on the backend.
  *
  * @param handler the callback for various debug calls
  *
  * @return void
+ * @since v1.0
  */
 - (void)debugWithHandler:(KATDebugHandler)handler;
 
 
 /**
- * Stops monitoring and ranging beacons
+ * Stops monitoring and ranging beacons, it does not destroy the object.
+ * Calling the startWithHandler: will activate the monitoring/ranging again.
  *
  * @return void
+ * @since v1.0
  */
 - (void)stop;
 
