@@ -25,6 +25,7 @@
 					<Path>index.html</Path>
 					<Subnodes>
 						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
 						
 					</Subnodes>
 				</Node>
@@ -100,6 +101,11 @@
         <Node id="3" type="file" documentType="reference">
             <Name>KATHandlerFilter</Name>
             <Path>Constants/KATHandlerFilter.html</Path>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
+            <Name>KATTrackingEvent</Name>
+            <Path>Constants/KATTrackingEvent.html</Path>
             
         </Node>
 		

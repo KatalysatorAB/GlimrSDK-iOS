@@ -78,6 +78,23 @@ This also depends on the beacon configuration on the backend.</Abstract>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconManager/trackEvent:</TokenIdentifier>
+			<Abstract type="html">Enables single event tracking for more backend analytics data</Abstract>
+			<DeclaredIn>KATBeaconManager.h</DeclaredIn>
+			
+			<Declaration>- (void)trackEvent:(KATTrackingEvent)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">type</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">void</Abstract></ReturnValue>
+			<Anchor>//api/name/trackEvent:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/KATBeaconManager/stop</TokenIdentifier>
 			<Abstract type="html">Stops monitoring and ranging beacons, it does not destroy the object.
 Calling the startWithHandler: will activate the monitoring/ranging again.</Abstract>

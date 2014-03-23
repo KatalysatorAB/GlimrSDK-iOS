@@ -10,6 +10,28 @@
 
 
 /**
+ * KATTrackingEvent gives predefined options for tracking events in the app
+ * Event tracking is optional and enriches analytics data on the backend.
+ * - KATTrackingEventPresent will be called automatically for each `startWithHandler` call
+ *
+ */
+typedef NS_OPTIONS(NSUInteger, KATTrackingEvent) {
+    /** The KATTrackingEventPresent flag indicates that something is visually presented upon a beacon trigger.
+     * @since v1.0.1
+     */
+    KATTrackingEventPresent,
+    /** The KATTrackingEventAction allows to track actions such es button taps etc..
+     * @since v1.0.1
+     */
+    KATTrackingEventAction,
+    /** The KATTrackingEventError allows to track errors.
+     * @since v1.0.1
+     */
+    KATTrackingEventError
+};
+
+
+/**
  * KATAdvertHandler defines the callback for beacon actions.
  *
  * @since v1.0
@@ -89,6 +111,17 @@ typedef void(^KATDebugHandler)(id result);
  * @since v1.0
  */
 - (void)debugWithHandler:(KATDebugHandler)handler;
+
+
+/**
+ * Enables single event tracking for more backend analytics data
+ *
+ * @param event type
+ *
+ * @return void
+ * @since v1.0.1
+ */
+- (void)trackEvent:(KATTrackingEvent)event;
 
 
 /**

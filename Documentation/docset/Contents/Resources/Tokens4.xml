@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/KATTrackingEvent.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/KATTrackingEvent</TokenIdentifier>
+			<Abstract type="html">KATTrackingEvent gives predefined options for tracking events in the app
+Event tracking is optional and enriches analytics data on the backend.
+- KATTrackingEventPresent will be called automatically for each startWithHandler call</Abstract>
+			<DeclaredIn>KATBeaconManager.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KATTrackingEventPresent</TokenIdentifier>
+            <Abstract type="html">The KATTrackingEventPresent flag indicates that something is visually presented upon a beacon trigger.</Abstract>
+            <Declaration>KATTrackingEventPresent</Declaration>
+            <Availability type="html">(
+    &quot;v1.0.1\n     &quot;
+)</Availability>
+            <DeclaredIn>KATBeaconManager.h</DeclaredIn>
+            
+            <NodeRef refid="4"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KATTrackingEventAction</TokenIdentifier>
+            <Abstract type="html">The KATTrackingEventAction allows to track actions such es button taps etc..</Abstract>
+            <Declaration>KATTrackingEventAction</Declaration>
+            <Availability type="html">(
+    &quot;v1.0.1\n     &quot;
+)</Availability>
+            <DeclaredIn>KATBeaconManager.h</DeclaredIn>
+            
+            <NodeRef refid="4"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/KATTrackingEventError</TokenIdentifier>
+            <Abstract type="html">The KATTrackingEventError allows to track errors.</Abstract>
+            <Declaration>KATTrackingEventError</Declaration>
+            <Availability type="html">(
+    &quot;v1.0.1\n     &quot;
+)</Availability>
+            <DeclaredIn>KATBeaconManager.h</DeclaredIn>
+            
+            <NodeRef refid="4"/>
+        </Token>
+        
+	</File>
+</Tokens>
