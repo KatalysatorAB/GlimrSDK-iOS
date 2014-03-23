@@ -12,7 +12,7 @@ KatalysatorSDK Readme
 - The content is configured on the backend, see developer.katalysator.io
 - The default sample provides a simple trigger when the user "Enters/Exits" the beacon range
 
-For documentation visit [http://developer.katalysator.io]. 
+For documentation visit http://developer.katalysator.io. 
 
 ###Changelog
 02/11/2013 - v1.0.0b - Initial release ready for testing
