@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3232B4D618246C47009E75E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D518246C47009E75E7 /* Foundation.framework */; };
+		3232B4D618246C47009E75E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D518246C47009E75E7 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3232B4D818246C47009E75E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D718246C47009E75E7 /* CoreGraphics.framework */; };
 		3232B4DA18246C47009E75E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D918246C47009E75E7 /* UIKit.framework */; };
 		3232B4E018246C47009E75E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3232B4DE18246C47009E75E7 /* InfoPlist.strings */; };
@@ -16,8 +16,8 @@
 		3232B4E918246C47009E75E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3232B4E718246C47009E75E7 /* Main.storyboard */; };
 		3232B4EC18246C47009E75E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3232B4EB18246C47009E75E7 /* ViewController.m */; };
 		3232B4EE18246C47009E75E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3232B4ED18246C47009E75E7 /* Images.xcassets */; };
-		3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50A18246C51009E75E7 /* CoreLocation.framework */; };
-		3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */; };
+		3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50A18246C51009E75E7 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3232B50F18246C8D009E75E7 /* KatalysatorSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */; };
 /* End PBXBuildFile section */
 
@@ -310,6 +310,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -330,6 +331,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
