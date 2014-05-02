@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Katalysator AB. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "KATBeaconConfiguration.h"
 
 
@@ -33,10 +34,13 @@ typedef NS_OPTIONS(NSUInteger, KATTrackingEvent) {
 
 /**
  * KATAdvertHandler defines the callback for beacon actions.
+ * result contains the result which could be a view, notification or a dictionary.
+ * cached helps to identify whether the event just happened or if it came from a cached version,
+ * i.e. when receiving the callback after the user opens the app from a notification
  *
  * @since v1.0
  */
-typedef void(^KATAdvertHandler)(id result, NSError *error);
+typedef void(^KATAdvertHandler)(id result, BOOL cached, NSError *error);
 
 
 /**
@@ -122,6 +126,16 @@ typedef void(^KATDebugHandler)(id result);
  * @since v1.0.1
  */
 - (void)trackEvent:(KATTrackingEvent)event;
+
+
+/**
+ * Get the current known region state.
+ * This is available once the state was determined during init.
+ *
+ * @return CLRegionState
+ * @since v1.0.7
+ */
+- (CLRegionState)regionState;
 
 
 /**
