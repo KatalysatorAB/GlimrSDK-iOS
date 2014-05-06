@@ -96,4 +96,13 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
 @property (nonatomic) KATHandlerFilter handlerFilter;
 
 
+/**
+ * Settings suppressBluetoothAccuracyAlert to YES will disable the alert that usually pops up
+ * When using CoreLocation + Beacon and Bluetooth is turned off on the device.
+ *
+ * @since v1.0.8
+ */
+@property (nonatomic) BOOL suppressBluetoothAccuracyAlert;
+
+
 @end

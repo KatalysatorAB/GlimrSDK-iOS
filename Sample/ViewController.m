@@ -22,6 +22,7 @@
     beaconConfiguration.apiToken = [[NSUUID alloc] initWithUUIDString:@"B3945743-D258-49D0-AFBF-1E409AE59501"];
     beaconConfiguration.handlerFilter = KATHandlerFilterView;
     beaconConfiguration.presentingView = self.view;
+    beaconConfiguration.suppressBluetoothAccuracyAlert = YES;
     
     KATBeaconManager *beaconManager = [[KATBeaconManager alloc] initWithConfiguration:beaconConfiguration];
     
