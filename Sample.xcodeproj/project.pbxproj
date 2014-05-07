@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3232B4D618246C47009E75E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D518246C47009E75E7 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3232B4D618246C47009E75E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D518246C47009E75E7 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3232B4D818246C47009E75E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D718246C47009E75E7 /* CoreGraphics.framework */; };
 		3232B4DA18246C47009E75E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D918246C47009E75E7 /* UIKit.framework */; };
 		3232B4E018246C47009E75E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3232B4DE18246C47009E75E7 /* InfoPlist.strings */; };
@@ -147,7 +147,7 @@
 						DevelopmentTeam = 8P458BMU67;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
