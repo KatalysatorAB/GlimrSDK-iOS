@@ -14,5 +14,12 @@ KatalysatorSDK Readme
 
 For documentation visit http://developer.katalysator.io. 
 
-###Changelog
-02/11/2013 - v1.0.0b - Initial release ready for testing
+###Installation with CocoaPods
+
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like KatalysatorSDK in your projects.
+
+Podfile
+```
+platform :ios, '7.0'
+pod "KatalysatorSDK"
+```
