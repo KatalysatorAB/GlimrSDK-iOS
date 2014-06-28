@@ -129,6 +129,18 @@ typedef void(^KATDebugHandler)(id result);
 
 
 /**
+ * Enables single event tracking for more backend analytics data
+ *
+ * @param event type
+ * @param data
+ *
+ * @return void
+ * @since v1.1.4
+ */
+- (void)trackEvent:(KATTrackingEvent)event payload:(id)data;
+
+
+/**
  * Get the current known region state.
  * This is available once the state was determined during init.
  *

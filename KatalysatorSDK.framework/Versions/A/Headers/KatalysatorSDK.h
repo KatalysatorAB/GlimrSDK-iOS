@@ -9,3 +9,5 @@
 
 #import "KATBeaconManager.h"
 #import "KATBeaconConfiguration.h"
+#import "KATCouponManager.h"
+#import "KATSurveyManager.h"
