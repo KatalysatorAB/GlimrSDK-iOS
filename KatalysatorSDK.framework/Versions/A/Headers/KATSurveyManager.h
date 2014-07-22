@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "KATBeaconConfiguration.h"
 
+/**
+ * KATSurveyManager handles survey submission
+ *
+ * @since v1.1.4
+ */
 @interface KATSurveyManager : NSObject
 
 
@@ -16,8 +21,8 @@
  * Track answers to a survey. Simply post the array with the questions and
  * filled answer key
  *
- * @param answers
- * @param config the api configuration
+ * @param answers the answers from the user
+ * @param configuration the api configuration
  *
  * @return void
  * @since v1.1.4

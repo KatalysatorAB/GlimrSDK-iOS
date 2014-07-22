@@ -44,6 +44,14 @@ typedef void(^KATAdvertHandler)(id result, BOOL cached, NSError *error);
 
 
 /**
+ * KATTriggerHandler defines the callback for trigger calls.
+ *
+ * @since v1.1.8
+ */
+typedef void(^KATTriggerHandler)(NSDictionary *requestDict);
+
+
+/**
  * KATDebugHandler defines the callback for debug calls.
  *
  * @since v1.0
@@ -106,6 +114,17 @@ typedef void(^KATDebugHandler)(id result);
 
 
 /**
+ * The trgger callback get called when the sdk sends requests to the backend
+ *
+ * @param handler the callback function when triggered
+ *
+ * @return void
+ * @since v1.1.8
+ */
+- (void)triggerWithHandler:(KATTriggerHandler)handler;
+
+
+/**
  * The handler gets called at different locations to help debugging.
  * This also depends on the beacon configuration on the backend.
  *
@@ -132,7 +151,7 @@ typedef void(^KATDebugHandler)(id result);
  * Enables single event tracking for more backend analytics data
  *
  * @param event type
- * @param data
+ * @param data usually key-value pairs of additional data
  *
  * @return void
  * @since v1.1.4

@@ -35,6 +35,14 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
 
 
 /**
+ * KATDebugHandler defines the callback for debug calls.
+ *
+ * @since v1.0
+ */
+typedef void(^KATUpdateRegionsHandler)(NSArray *regions, NSError *error);
+
+
+/**
  
  A KATBeaconConfiguration object provides the settings for monitoring/ranging of a certain beacon as well as authentication properties against the Katalysator backend.
  
@@ -48,11 +56,10 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
 /// @name API token and beacon token
 ////////////////////////////////////////////////////////////////////////////////
 
-
 /**
  * UUID for the region/beacon that should be monitored or ranged.
  * Contact Katalysator AB for more information on this.
- * @warning `beaconToken` must not be `nil`.
+ * @warning `beaconToken` can be `nil`. In that case regions can be managed on the backend
  *
  * @since v1.0
  */
@@ -66,7 +73,7 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
  *
  * @since v1.0
  */
-@property (strong, nonatomic) NSUUID *apiToken;
+@property (copy, nonatomic) NSUUID *apiToken;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -103,6 +110,34 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
  * @since v1.0.8
  */
 @property (nonatomic) BOOL suppressBluetoothAccuracyAlert;
+
+
+/**
+ * Settings allowCircularRegionMonitoring allows to monitor circular regions configured on the dashboard
+ *
+ * @since v1.1.7
+ */
+@property (nonatomic) BOOL allowCircularRegionMonitoring;
+
+
+/**
+ * Settings allowAdvertisingIdentifierAccess allows the sdk to include the IDFA in the request payload
+ *
+ * @since v1.1.8
+ */
+@property (nonatomic) BOOL allowAdvertisingIdentifierAccess;
+
+
+/**
+ * Get current list of regions to monitor managed on the backend.
+ * To use this `beaconToken` must be nil.
+ *
+ * @param update forces the region list update
+ * @param completion handler
+ *
+ * @since v1.1.6
+ */
+- (NSArray *)beaconRegionsForceUpdate:(BOOL)update completion:(KATUpdateRegionsHandler)completion;
 
 
 @end
