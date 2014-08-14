@@ -19,6 +19,7 @@
 		3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50A18246C51009E75E7 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3232B50F18246C8D009E75E7 /* KatalysatorSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */; };
+		328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A755F1998FDCE00E99A50 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3232B50A18246C51009E75E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KatalysatorSDK.framework; sourceTree = "<group>"; };
 		3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KatalysatorSDKResources.bundle; sourceTree = "<group>"; };
+		328A755F1998FDCE00E99A50 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */,
 				3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */,
 				3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */,
 				3232B4D818246C47009E75E7 /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +81,7 @@
 		3232B4D418246C47009E75E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				328A755F1998FDCE00E99A50 /* AdSupport.framework */,
 				3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */,
 				3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */,
 				3232B50A18246C51009E75E7 /* CoreLocation.framework */,
