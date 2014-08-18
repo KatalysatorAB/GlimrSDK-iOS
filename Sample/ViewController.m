@@ -28,7 +28,7 @@
     
     KATBeaconManager *beaconManager = [[KATBeaconManager alloc] initWithConfiguration:beaconConfiguration];
     
-    [beaconManager startWithHandler:^(id result, BOOL cached, NSError *error)
+    [beaconManager startWithHandler:^(id result, BOOL cached, NSDate *date, NSError *error)
     {
         NSLog(@"RESULT %@", result);
     }];

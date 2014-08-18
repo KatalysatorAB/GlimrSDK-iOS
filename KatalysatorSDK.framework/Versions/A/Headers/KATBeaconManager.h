@@ -40,7 +40,7 @@ typedef NS_OPTIONS(NSUInteger, KATTrackingEvent) {
  *
  * @since v1.0
  */
-typedef void(^KATAdvertHandler)(id result, BOOL cached, NSError *error);
+typedef void(^KATAdvertHandler)(id result, BOOL cached, NSDate *date, NSError *error);
 
 
 /**
