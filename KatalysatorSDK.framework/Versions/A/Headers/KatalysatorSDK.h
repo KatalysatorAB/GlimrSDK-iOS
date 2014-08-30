@@ -8,6 +8,8 @@
 
 
 #import "KATBeaconManager.h"
+#import "KATAdvertisementManager.h"
 #import "KATBeaconConfiguration.h"
 #import "KATCouponManager.h"
 #import "KATSurveyManager.h"
+#import "KATAdvertisementView.h"
