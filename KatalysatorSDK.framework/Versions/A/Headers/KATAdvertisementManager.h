@@ -89,4 +89,12 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
 - (void)loadAd;
 
 
+/**
+ * Performs a glimr conclude check
+ *
+ * @return void
+ * @since v1.2.9
+ */
+- (void)conclude;
+
 @end
