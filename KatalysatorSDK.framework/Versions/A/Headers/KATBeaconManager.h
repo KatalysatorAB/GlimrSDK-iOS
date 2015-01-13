@@ -7,7 +7,7 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
-#import "KATBeaconConfiguration.h"
+#import "KATConfiguration.h"
 
 
 /**
@@ -63,7 +63,7 @@ typedef void(^KATDebugHandler)(id result);
  
  A KATBeaconManager is responsible for the beacon interaction and callbacks to the app that integrates the SDK. In general it should be used as a shared object.
  
- The manager object needs a KATBeaconConfiguration object to initialize the beacon monitoring and ranging with the custom needs. Once the device enters or exits a region a callback to the startWithHandler: block might happen depending on the beacon configuration on the Katalysator Beacon backend. The same goes for entering and existing a individual beacon. Several beacons can be set up in one region and configured on the backend.
+ The manager object needs a KATConfiguration object to initialize the beacon monitoring and ranging with the custom needs. Once the device enters or exits a region a callback to the startWithHandler: block might happen depending on the beacon configuration on the Katalysator Beacon backend. The same goes for entering and existing a individual beacon. Several beacons can be set up in one region and configured on the backend.
  
  The SDK makes use of the CoreLocation framework, specifically the monitoring and ranging of beacons in background and foreground mode.
  
@@ -93,7 +93,7 @@ typedef void(^KATDebugHandler)(id result);
  * @return instancetype a KATBeaconManager instance with configuration settings
  * @since v1.0
  */
-- (instancetype)initWithConfiguration:(KATBeaconConfiguration *)configuration;
+- (instancetype)initWithConfiguration:(KATConfiguration *)configuration;
 
 
 ////////////////////////////////////////////////////////////////////////////////

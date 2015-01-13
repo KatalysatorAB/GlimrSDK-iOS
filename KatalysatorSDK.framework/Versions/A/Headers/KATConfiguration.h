@@ -1,5 +1,5 @@
 //
-//  KATBeaconConfiguration.h
+//  KATConfiguration.h
 //  KatalysatorSDK
 //
 //  Created by Sven Roeder on 10/18/13.
@@ -15,7 +15,7 @@
  */
 typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
     /** The KATAdvertHandler will return all kinds of data. This might be:
-     * NSDictionary, UILocationNotification, UIView 
+     * NSDictionary, UILocationNotification
      * @since v1.0
      */
     KATHandlerFilterAll     = 1 << 0,
@@ -26,11 +26,7 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
     /** The KATAdvertHandler will return only return alert types of UILocalNotifications. 
      * @since v1.0
      */
-    KATHandlerFilterAlert   = 1 << 2,
-    /** The KATAdvertHandler will return only return types or subclasses of UIView. 
-     * @since v1.0
-     */
-    KATHandlerFilterView    = 1 << 3,
+    KATHandlerFilterAlert   = 1 << 2
 };
 
 
@@ -39,17 +35,17 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
  *
  * @since v1.0
  */
-typedef void(^KATUpdateRegionsHandler)(NSArray *regions, NSError *error);
+typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
  
- A KATBeaconConfiguration object provides the settings for monitoring/ranging of a certain beacon as well as authentication properties against the Katalysator backend.
+ A KATConfiguration object provides the settings for monitoring/ranging of a certain beacon as well as authentication properties against the Katalysator backend.
  
  An instance of this class needs to be passed in when initializing the KATBeaconManager.
  
  */
-@interface KATBeaconConfiguration : NSObject
+@interface KATConfiguration : NSObject
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -59,11 +55,11 @@ typedef void(^KATUpdateRegionsHandler)(NSArray *regions, NSError *error);
 /**
  * UUID for the region/beacon that should be monitored or ranged.
  * Contact Katalysator AB for more information on this.
- * @warning `beaconToken` can be `nil`. In that case regions can be managed on the backend
+ * @warning `regionToken` can be `nil`. In that case regions can be managed on the backend
  *
  * @since v1.0
  */
-@property (strong, nonatomic) NSUUID *beaconToken;
+@property (strong, nonatomic) NSUUID *regionToken;
 
 
 /**
@@ -79,18 +75,6 @@ typedef void(^KATUpdateRegionsHandler)(NSArray *regions, NSError *error);
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Callback options
 ////////////////////////////////////////////////////////////////////////////////
-
-
-/**
- * Optionally you can supply a presenting view which will be feeded with the results. 
- * This property has only effect in certain circumstances:
- * - The integrating app needs to be in foreground during the beacon trigger
- * - The handlerFilter must be set to KATHandlerFilterView
- * - The backend configuration needs to be configured to match these settings
- *
- * @since v1.0
- */
-@property (strong, nonatomic) UIView *presentingView;
 
 
 /**
@@ -130,14 +114,15 @@ typedef void(^KATUpdateRegionsHandler)(NSArray *regions, NSError *error);
 
 /**
  * Get current list of regions to monitor managed on the backend.
- * To use this `beaconToken` must be nil.
+ * To use this `regionToken` must be nil.
  *
  * @param update forces the region list update
  * @param completion handler
+ * @return local config
  *
- * @since v1.1.6
+ * @since v1.4.0
  */
-- (NSArray *)beaconRegionsForceUpdate:(BOOL)update completion:(KATUpdateRegionsHandler)completion;
+- (NSArray *)configUpdate:(BOOL)force completion:(KATUpdateConfigHandler)completion;
 
 
 @end

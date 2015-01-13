@@ -18,7 +18,6 @@
 		3232B4EE18246C47009E75E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3232B4ED18246C47009E75E7 /* Images.xcassets */; };
 		3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50A18246C51009E75E7 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		3232B50F18246C8D009E75E7 /* KatalysatorSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */; };
 		328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A755F1998FDCE00E99A50 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +36,8 @@
 		3232B4EA18246C47009E75E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3232B4EB18246C47009E75E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3232B4ED18246C47009E75E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3232B4F418246C47009E75E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3232B50A18246C51009E75E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KatalysatorSDK.framework; sourceTree = "<group>"; };
-		3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KatalysatorSDKResources.bundle; sourceTree = "<group>"; };
 		328A755F1998FDCE00E99A50 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -83,12 +80,10 @@
 			children = (
 				328A755F1998FDCE00E99A50 /* AdSupport.framework */,
 				3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */,
-				3232B50D18246C8D009E75E7 /* KatalysatorSDKResources.bundle */,
 				3232B50A18246C51009E75E7 /* CoreLocation.framework */,
 				3232B4D518246C47009E75E7 /* Foundation.framework */,
 				3232B4D718246C47009E75E7 /* CoreGraphics.framework */,
 				3232B4D918246C47009E75E7 /* UIKit.framework */,
-				3232B4F418246C47009E75E7 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,7 +177,6 @@
 			files = (
 				3232B4EE18246C47009E75E7 /* Images.xcassets in Resources */,
 				3232B4E018246C47009E75E7 /* InfoPlist.strings in Resources */,
-				3232B50F18246C8D009E75E7 /* KatalysatorSDKResources.bundle in Resources */,
 				3232B4E918246C47009E75E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
