@@ -113,6 +113,14 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
+ * Settings askForNotificationPermission will ask for notifications permission if not allowed already
+ *
+ * @since v1.4.1
+ */
+@property (nonatomic) BOOL askForNotificationPermission;
+
+
+/**
  * Get current list of regions to monitor managed on the backend.
  * To use this `regionToken` must be nil.
  *
