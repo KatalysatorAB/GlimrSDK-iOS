@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Katalysator AB. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 
 /**
  * KATHandlerFilter allows bit mask callback filtering.
@@ -125,12 +126,13 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
  * To use this `regionToken` must be nil.
  *
  * @param update forces the region list update
+ * @param coordinate for adjusting regions
  * @param completion handler
  * @return local config
  *
- * @since v1.4.0
+ * @since v1.4.2
  */
-- (NSArray *)configUpdate:(BOOL)force completion:(KATUpdateConfigHandler)completion;
+- (NSArray *)configUpdate:(BOOL)force coordinate:(CLLocationCoordinate2D)coordinate completion:(KATUpdateConfigHandler)completion;
 
 
 @end
