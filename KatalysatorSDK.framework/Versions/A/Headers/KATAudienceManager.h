@@ -68,9 +68,9 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * Performs a glimr conclude check
  *
  * @return void
- * @since v1.4.0
+ * @since v1.4.4
  */
-- (void)conclude:(NSArray *)concludes;
+- (void)conclude:(NSArray *)concludes media:(NSNumber *)media;
 
 
 @end
