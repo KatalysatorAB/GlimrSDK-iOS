@@ -17,8 +17,8 @@
 		3232B4EC18246C47009E75E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3232B4EB18246C47009E75E7 /* ViewController.m */; };
 		3232B4EE18246C47009E75E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3232B4ED18246C47009E75E7 /* Images.xcassets */; };
 		3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50A18246C51009E75E7 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A755F1998FDCE00E99A50 /* AdSupport.framework */; };
+		32B648911A791A49007A63C7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B648901A791A49007A63C7 /* KatalysatorSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		3232B4EB18246C47009E75E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3232B4ED18246C47009E75E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3232B50A18246C51009E75E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KatalysatorSDK.framework; sourceTree = "<group>"; };
 		328A755F1998FDCE00E99A50 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		32B648901A791A49007A63C7 /* KatalysatorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KatalysatorSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +47,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */,
+				32B648911A791A49007A63C7 /* KatalysatorSDK.framework in Frameworks */,
 				3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */,
-				3232B50E18246C8D009E75E7 /* KatalysatorSDK.framework in Frameworks */,
 				3232B4D818246C47009E75E7 /* CoreGraphics.framework in Frameworks */,
 				3232B4DA18246C47009E75E7 /* UIKit.framework in Frameworks */,
 				3232B4D618246C47009E75E7 /* Foundation.framework in Frameworks */,
@@ -78,8 +78,8 @@
 		3232B4D418246C47009E75E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32B648901A791A49007A63C7 /* KatalysatorSDK.framework */,
 				328A755F1998FDCE00E99A50 /* AdSupport.framework */,
-				3232B50C18246C8D009E75E7 /* KatalysatorSDK.framework */,
 				3232B50A18246C51009E75E7 /* CoreLocation.framework */,
 				3232B4D518246C47009E75E7 /* Foundation.framework */,
 				3232B4D718246C47009E75E7 /* CoreGraphics.framework */,
@@ -146,7 +146,7 @@
 						DevelopmentTeam = 8P458BMU67;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -308,7 +308,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -329,7 +329,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
