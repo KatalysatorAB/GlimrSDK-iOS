@@ -10,6 +10,6 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 Podfile
 ```
-platform :ios, '7.0'
+platform :ios, '6.0'
 pod "KatalysatorSDK"
 ```
