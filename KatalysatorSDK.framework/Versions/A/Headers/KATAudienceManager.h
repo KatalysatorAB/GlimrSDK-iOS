@@ -43,6 +43,17 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
 
 
 /**
+ * Loads associated tags for a link between device and a custom audience
+ *
+ * @param completion the callback for the audience dictionary or error
+ *
+ * @return void
+ * @since v1.5.4
+ */
+- (void)audiencesAndGeotagsWithCompletion:(KATAudienceHandler)completion;
+
+
+/**
  * Allows adding additional data to a profile for creating audiences
  *
  * @param dict dictionary with additional information
