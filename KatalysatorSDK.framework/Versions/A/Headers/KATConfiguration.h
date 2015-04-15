@@ -122,6 +122,14 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
+ * Settings askForLocationPermission will ask for location permission if not allowed already, default is YES
+ *
+ * @since v1.5.6
+ */
+@property (nonatomic) BOOL askForLocationPermission;
+
+
+/**
  * Get current list of regions to monitor managed on the backend.
  * To use this `regionToken` must be nil.
  *
