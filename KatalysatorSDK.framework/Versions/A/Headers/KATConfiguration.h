@@ -32,6 +32,17 @@ typedef NS_OPTIONS(NSUInteger, KATHandlerFilter) {
 
 
 /**
+ * KATSSLPinningMode ssl pinning mode. Default is KATSSLPinningModeNone
+ *
+ */
+typedef NS_OPTIONS(NSUInteger, KATSSLPinningMode) {
+    KATSSLPinningModeNone    = 1 << 0,
+    KATSSLPinningModeLeaf    = 1 << 1,
+    KATSSLPinningModeChain   = 1 << 2
+};
+
+
+/**
  * KATDebugHandler defines the callback for debug calls.
  *
  * @since v1.0
@@ -141,6 +152,16 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
  * @since v1.4.2
  */
 - (NSArray *)configUpdate:(BOOL)force coordinate:(CLLocationCoordinate2D)coordinate completion:(KATUpdateConfigHandler)completion;
+
+
+/**
+ * Method to enable ssl pinning. Please be aware that this requires additional files inside the app bundle.
+ * Depending on the mode public certificates for *.appspot.com are required.
+ *
+ *
+ * @since v1.5.6
+ */
++ (void)setPinningMode:(KATSSLPinningMode)pinningMode;
 
 
 @end
