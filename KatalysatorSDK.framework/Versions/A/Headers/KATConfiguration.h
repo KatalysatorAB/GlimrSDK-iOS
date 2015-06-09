@@ -141,17 +141,32 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
+ * Checks if a config update is required
+ *
+ * @since v1.6.8
+ */
+@property (nonatomic) BOOL needsConfigUpdate;
+
+
+/**
+ * Get the local config
+ *
+ * @since v1.6.8
+ */
+@property (nonatomic) NSArray *localConfig;
+
+
+/**
  * Get current list of regions to monitor managed on the backend.
  * To use this `regionToken` must be nil.
  *
  * @param update forces the region list update
  * @param coordinate for adjusting regions
  * @param completion handler
- * @return local config
  *
  * @since v1.4.2
  */
-- (NSArray *)configUpdate:(BOOL)force coordinate:(CLLocationCoordinate2D)coordinate completion:(KATUpdateConfigHandler)completion;
+- (void)configUpdate:(BOOL)force coordinate:(CLLocationCoordinate2D)coordinate completion:(KATUpdateConfigHandler)completion;
 
 
 /**
