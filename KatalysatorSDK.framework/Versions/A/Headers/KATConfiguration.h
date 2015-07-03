@@ -170,6 +170,22 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
+ * Check if caching is disabled, use for development only
+ *
+ * @since v1.6.9
+ */
++ (BOOL)disableCaching;
+
+
+/**
+ * Disables caching on the device, use for development only
+ *
+ * @since v1.6.9
+ */
++ (void)setDisableCaching:(BOOL)value;
+
+
+/**
  * Method to enable ssl pinning. Please be aware that this requires additional files inside the app bundle.
  * Depending on the mode public certificates for *.appspot.com are required.
  *
