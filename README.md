@@ -2,7 +2,7 @@ KatalysatorSDK Readme
 ==========
 
 ###Usage
-For documentation visit http://katalysatorab.github.io/ 
+For documentation visit http://developer.glimr.io
 
 ###Installation with CocoaPods
 
