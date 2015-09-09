@@ -161,12 +161,12 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
  * To use this `regionToken` must be nil.
  *
  * @param update forces the region list update
- * @param coordinate for adjusting regions
+ * @param location for adjusting regions
  * @param completion handler
  *
- * @since v1.4.2
+ * @since v1.7.2
  */
-- (void)configUpdate:(BOOL)force coordinate:(CLLocationCoordinate2D)coordinate completion:(KATUpdateConfigHandler)completion;
+- (void)configUpdate:(BOOL)force location:(CLLocation *)location completion:(KATUpdateConfigHandler)completion;
 
 
 /**
