@@ -76,12 +76,27 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
 
 
 /**
- * Performs a glimr conclude check
+ * Allows url tracking
+ *
+ * @param url
  *
  * @return void
- * @since v1.4.4
+ * @since v1.7.6
  */
-- (void)conclude:(NSArray *)concludes media:(NSNumber *)media;
++ (void)trackURL:(NSURL *)url;
+
+
+/**
+ * Performs a glimr conclude check
+ *
+ * @param concludes app checking
+ * @param media media checking
+ * @param urls url article recording
+ *
+ * @return void
+ * @since v1.7.6
+ */
+- (void)conclude:(NSArray *)concludes media:(NSNumber *)media urls:(NSNumber *)urls;
 
 
 @end
