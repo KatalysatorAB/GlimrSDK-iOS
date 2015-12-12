@@ -17,20 +17,13 @@
 {
     [super viewDidAppear:animated];
     
-    // REGION TRACKING
+    // DATA COLLECTION
     KATConfiguration *config = [[KATConfiguration alloc] init];
     config.apiToken = [[NSUUID alloc] initWithUUIDString:@"B3945743-D258-49D0-AFBF-1E409AE59501"];
-    config.handlerFilter = KATHandlerFilterData;
-    config.allowCircularRegionMonitoring = YES;
-    config.allowAdvertisingIdentifierAccess = YES;
     config.suppressBluetoothAccuracyAlert = YES;
     
     KATBeaconManager *beaconManager = [[KATBeaconManager alloc] initWithConfiguration:config];
-    
-    [beaconManager startWithHandler:^(id result, BOOL cached, NSDate *date, NSError *error)
-    {
-        NSLog(@"RESULT %@", result);
-    }];
+    [beaconManager startCollecting];
     
     [beaconManager triggerWithHandler:^(NSDictionary *requestDict)
     {
@@ -42,7 +35,7 @@
         NSLog(@"DEBUG %@", result);
     }];
     
-    // AUDIENCE
+    // AUDIENCE RECEIVING
     KATAudienceManager *audienceManager = [[KATAudienceManager alloc] initWithApiToken:config.apiToken];
     [audienceManager collect:@{@"userId" : @"sven@glimr.io"}];
     [audienceManager audiencesAndGeotagsWithCompletion:^(NSDictionary *audiences, NSError *error)

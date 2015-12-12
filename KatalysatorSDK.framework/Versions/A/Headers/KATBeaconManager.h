@@ -105,12 +105,10 @@ typedef void(^KATDebugHandler)(id result);
  * Starts monitoring/ranging for beacons and makes calls to the block callback.
  * This also depends on the beacon configuration on the backend.
  *
- * @param handler the callback function when a beacon action is fired
- *
  * @return void
- * @since v1.0
+ * @since v1.7.8
  */
-- (void)startWithHandler:(KATAdvertHandler)handler;
+- (void)startCollecting;
 
 
 /**
@@ -140,17 +138,6 @@ typedef void(^KATDebugHandler)(id result);
  * Enables single event tracking for more backend analytics data
  *
  * @param event type
- *
- * @return void
- * @since v1.0.1
- */
-- (void)trackEvent:(KATTrackingEvent)event;
-
-
-/**
- * Enables single event tracking for more backend analytics data
- *
- * @param event type
  * @param data usually key-value pairs of additional data
  *
  * @return void
@@ -174,9 +161,9 @@ typedef void(^KATDebugHandler)(id result);
  * Calling the startWithHandler: will activate the monitoring/ranging again.
  *
  * @return void
- * @since v1.0
+ * @since v1.7.8
  */
-- (void)stop;
+- (void)stopCollecting;
 
 
 @end

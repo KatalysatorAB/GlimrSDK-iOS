@@ -65,17 +65,6 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
 
 
 /**
- * Allows to register a push notification token for a specific device
- *
- * @param token device token as provided by ios
- *
- * @return void
- * @since v1.2.7
- */
-- (void)registerDeviceToken:(NSData *)token;
-
-
-/**
  * Allows url tracking
  *
  * @param url
