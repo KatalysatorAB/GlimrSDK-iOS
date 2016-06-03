@@ -40,7 +40,11 @@
     [audienceManager collect:@{@"userId" : @"sven@glimr.io"}];
     [audienceManager audiencesAndGeotagsWithCompletion:^(NSDictionary *audiences, NSError *error)
      {
+         // raw response
          NSLog(@"AUDIENCES %@", audiences);
+         
+         // helper method to create a url query string from the mapping
+         NSLog(@"AUDIENCES QUERY %@", [KATAudienceManager toQueryString:audiences[@"mapping"]]);
      }];
 }
 

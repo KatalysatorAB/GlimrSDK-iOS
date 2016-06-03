@@ -87,4 +87,14 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
 - (void)conclude:(NSArray *)concludes urls:(NSNumber *)urls;
 
 
+/**
+ * Utility method to create a query string out of a Glimr tag dict
+ *
+ * @param tag dictionary
+ *
+ * @return string
+ * @since v1.8.2
+ */
++ (NSString *)toQueryString:(NSDictionary *)kv;
+
 @end
