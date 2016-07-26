@@ -37,7 +37,6 @@
     
     // AUDIENCE RECEIVING
     KATAudienceManager *audienceManager = [[KATAudienceManager alloc] initWithApiToken:config.apiToken];
-    [audienceManager collect:@{@"userId" : @"sven@glimr.io"}];
     [audienceManager audiencesAndGeotagsWithCompletion:^(NSDictionary *audiences, NSError *error)
      {
          // raw response

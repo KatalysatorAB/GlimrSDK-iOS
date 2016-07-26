@@ -83,6 +83,14 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
+ * Monitoring visits via CoreLocation visit detection
+ *
+ * @since v1.8.4
+ */
+@property (nonatomic) BOOL monitorVisits;
+
+
+/**
  * Get the local config
  *
  * @since v1.6.8
