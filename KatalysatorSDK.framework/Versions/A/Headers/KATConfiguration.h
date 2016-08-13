@@ -91,6 +91,14 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 
 
 /**
+ * Determines whether the SDK needs to share available regions with other parts of the app
+ *
+ * @since v1.8.5
+ */
+@property (nonatomic) BOOL shareRegions;
+
+
+/**
  * Get the local config
  *
  * @since v1.6.8

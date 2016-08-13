@@ -17,7 +17,7 @@
 {
     [super viewDidAppear:animated];
     
-    // DATA COLLECTION
+    // START COLLECTING
     KATConfiguration *config = [[KATConfiguration alloc] init];
     config.apiToken = [[NSUUID alloc] initWithUUIDString:@"B3945743-D258-49D0-AFBF-1E409AE59501"];
     config.suppressBluetoothAccuracyAlert = YES;
@@ -25,25 +25,14 @@
     KATBeaconManager *beaconManager = [[KATBeaconManager alloc] initWithConfiguration:config];
     [beaconManager startCollecting];
     
-    [beaconManager triggerWithHandler:^(NSDictionary *requestDict)
-    {
-        NSLog(@"TRIGGER %@", requestDict);
-    }];
+    [beaconManager debugWithHandler:^(id result) {
+         NSLog(@"DEBUG %@", result);
+     }];
     
-    [beaconManager debugWithHandler:^(id result)
-    {
-        NSLog(@"DEBUG %@", result);
-    }];
-    
-    // AUDIENCE RECEIVING
+    // RECEIVE TAGS
     KATAudienceManager *audienceManager = [[KATAudienceManager alloc] initWithApiToken:config.apiToken];
-    [audienceManager audiencesAndGeotagsWithCompletion:^(NSDictionary *audiences, NSError *error)
-     {
-         // raw response
+    [audienceManager audiencesAndGeotagsWithCompletion:^(NSDictionary *audiences, NSError *error) {
          NSLog(@"AUDIENCES %@", audiences);
-         
-         // helper method to create a url query string from the mapping
-         NSLog(@"AUDIENCES QUERY %@", [KATAudienceManager toQueryString:audiences[@"mapping"]]);
      }];
 }
 
