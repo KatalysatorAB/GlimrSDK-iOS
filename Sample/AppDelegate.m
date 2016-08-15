@@ -19,7 +19,8 @@
     KATConfiguration *config = [[KATConfiguration alloc] init];
     config.apiToken = [[NSUUID alloc] initWithUUIDString:GLIMR_API_TOKEN];
     config.suppressBluetoothAccuracyAlert = YES;
-
+    config.askForLocationPermission = YES;
+    
     KATBeaconManager *beaconManager = [[KATBeaconManager alloc] initWithConfiguration:config];
     [beaconManager startCollecting];
     

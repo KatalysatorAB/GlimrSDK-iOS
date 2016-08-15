@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320D1A911D5FACC0009B4ADC /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 320D1A901D5FACC0009B4ADC /* Location.gpx */; };
 		3232B4D618246C47009E75E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D518246C47009E75E7 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3232B4D818246C47009E75E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D718246C47009E75E7 /* CoreGraphics.framework */; };
 		3232B4DA18246C47009E75E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B4D918246C47009E75E7 /* UIKit.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320D1A901D5FACC0009B4ADC /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		3232B4D218246C47009E75E7 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3232B4D518246C47009E75E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3232B4D718246C47009E75E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +120,7 @@
 		3232B4DC18246C47009E75E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				320D1A901D5FACC0009B4ADC /* Location.gpx */,
 				3232B4DD18246C47009E75E7 /* Sample-Info.plist */,
 				3232B4DE18246C47009E75E7 /* InfoPlist.strings */,
 				3232B4E118246C47009E75E7 /* main.m */,
@@ -190,6 +193,7 @@
 			files = (
 				3232B4EE18246C47009E75E7 /* Images.xcassets in Resources */,
 				3232B4E018246C47009E75E7 /* InfoPlist.strings in Resources */,
+				320D1A911D5FACC0009B4ADC /* Location.gpx in Resources */,
 				3232B4E918246C47009E75E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +326,7 @@
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.glimr.retarget;
+				PRODUCT_BUNDLE_IDENTIFIER = se.glimr.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7";
@@ -345,7 +349,7 @@
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.glimr.retarget;
+				PRODUCT_BUNDLE_IDENTIFIER = se.glimr.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7";
