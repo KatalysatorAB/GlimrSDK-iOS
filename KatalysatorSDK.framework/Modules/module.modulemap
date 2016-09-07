@@ -1,0 +1,5 @@
+framework module KatalysatorSDK {
+    umbrella header "KatalysatorSDK.h"
+    export *
+    module * { export * }
+}
