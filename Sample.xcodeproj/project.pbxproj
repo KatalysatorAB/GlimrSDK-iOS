@@ -19,7 +19,6 @@
 		3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3232B50A18246C51009E75E7 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A755F1998FDCE00E99A50 /* AdSupport.framework */; };
 		32B648911A791A49007A63C7 /* KatalysatorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B648901A791A49007A63C7 /* KatalysatorSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		32E7FCD61BCBED6C0024FB94 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E7FCD51BCBED6C0024FB94 /* MediaPlayer.framework */; };
 		32E7FCD81BCBED860024FB94 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E7FCD71BCBED860024FB94 /* CoreTelephony.framework */; };
 		32E7FCDA1BCBED910024FB94 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E7FCD91BCBED910024FB94 /* CoreBluetooth.framework */; };
 		32E7FCE01BCBEE120024FB94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E7FCDF1BCBEE120024FB94 /* SystemConfiguration.framework */; };
@@ -57,7 +56,6 @@
 				32E7FCE01BCBEE120024FB94 /* SystemConfiguration.framework in Frameworks */,
 				32E7FCDA1BCBED910024FB94 /* CoreBluetooth.framework in Frameworks */,
 				32E7FCD81BCBED860024FB94 /* CoreTelephony.framework in Frameworks */,
-				32E7FCD61BCBED6C0024FB94 /* MediaPlayer.framework in Frameworks */,
 				328A75601998FDCE00E99A50 /* AdSupport.framework in Frameworks */,
 				32B648911A791A49007A63C7 /* KatalysatorSDK.framework in Frameworks */,
 				3232B50B18246C51009E75E7 /* CoreLocation.framework in Frameworks */,
