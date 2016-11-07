@@ -31,6 +31,8 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This app records regions</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Use this app to allow iBeacon monitoring.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
