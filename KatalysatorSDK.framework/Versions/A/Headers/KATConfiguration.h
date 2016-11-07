@@ -145,4 +145,12 @@ typedef void(^KATUpdateConfigHandler)(NSArray *regions, NSError *error);
 + (void)setPinningMode:(KATSSLPinningMode)pinningMode;
 
 
+/**
+ * Checks if a collection call is required
+ *
+ * @since v1.9.1
+ */
++ (BOOL)needsCollectionCall;
+
+
 @end
