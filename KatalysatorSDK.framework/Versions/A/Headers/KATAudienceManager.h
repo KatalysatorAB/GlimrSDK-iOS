@@ -14,7 +14,7 @@
  *
  * @since v1.2.6
  */
-typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
+typedef void(^KATAudienceHandler)(NSDictionary * _Nullable audiences,  NSError * _Nullable error);
 
 
 @interface KATAudienceManager : NSObject
@@ -28,7 +28,7 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return void
  * @since v1.4.0
  */
-- (id)initWithApiToken:(NSUUID *)apiToken;
+- (id _Nullable)initWithApiToken:(NSUUID * _Nonnull)apiToken;
 
 
 /**
@@ -39,7 +39,7 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return void
  * @since v1.2.6
  */
-- (void)audiencesWithCompletion:(KATAudienceHandler)completion;
+- (void)audiencesWithCompletion:(KATAudienceHandler _Nullable)completion;
 
 
 /**
@@ -50,7 +50,7 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return void
  * @since v1.5.4
  */
-- (void)audiencesAndGeotagsWithCompletion:(KATAudienceHandler)completion;
+- (void)audiencesAndGeotagsWithCompletion:(KATAudienceHandler _Nullable)completion;
 
 
 /**
@@ -61,7 +61,7 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return void
  * @since v1.4.0
  */
-- (void)collect:(NSDictionary *)dict;
+- (void)collect:(NSDictionary * _Nullable)dict;
 
 
 /**
@@ -72,7 +72,7 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return void
  * @since v1.7.6
  */
-+ (void)trackURL:(NSURL *)url;
++ (void)trackURL:(NSURL * _Nonnull)url;
 
 
 /**
@@ -84,7 +84,7 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return void
  * @since v1.7.6
  */
-- (void)conclude:(NSArray *)concludes urls:(NSNumber *)urls;
+- (void)conclude:(NSArray * _Nullable)concludes urls:(NSNumber * _Nullable)urls;
 
 
 /**
@@ -95,6 +95,6 @@ typedef void(^KATAudienceHandler)(NSDictionary *audiences, NSError *error);
  * @return string
  * @since v1.8.2
  */
-+ (NSString *)toQueryString:(NSDictionary *)kv;
++ (NSString * _Nullable)toQueryString:(NSDictionary * _Nonnull)kv;
 
 @end

@@ -33,22 +33,11 @@ typedef NS_OPTIONS(NSUInteger, KATTrackingEvent) {
 
 
 /**
- * KATAdvertHandler defines the callback for beacon actions.
- * result contains the result which could be a view, notification or a dictionary.
- * cached helps to identify whether the event just happened or if it came from a cached version,
- * i.e. when receiving the callback after the user opens the app from a notification
- *
- * @since v1.0
- */
-typedef void(^KATAdvertHandler)(id result, BOOL cached, NSDate *date, NSError *error);
-
-
-/**
  * KATTriggerHandler defines the callback for trigger calls.
  *
  * @since v1.1.8
  */
-typedef void(^KATTriggerHandler)(NSDictionary *requestDict);
+typedef void(^KATTriggerHandler)(NSDictionary * _Nonnull requestDict);
 
 
 /**
@@ -56,7 +45,7 @@ typedef void(^KATTriggerHandler)(NSDictionary *requestDict);
  *
  * @since v1.0
  */
-typedef void(^KATDebugHandler)(id result);
+typedef void(^KATDebugHandler)(id _Nonnull result);
 
 
 /**
@@ -82,7 +71,7 @@ typedef void(^KATDebugHandler)(id result);
  * @return an previous instantiated instance of the KATBeaconManager
  * @since v1.0
  */
-+ (instancetype)shared;
++ (instancetype _Nullable)shared;
 
 
 /**
@@ -93,7 +82,7 @@ typedef void(^KATDebugHandler)(id result);
  * @return instancetype a KATBeaconManager instance with configuration settings
  * @since v1.0
  */
-- (instancetype)initWithConfiguration:(KATConfiguration *)configuration;
+- (instancetype _Nullable)initWithConfiguration:(KATConfiguration * _Nullable)configuration;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -119,7 +108,7 @@ typedef void(^KATDebugHandler)(id result);
  * @return void
  * @since v1.1.8
  */
-- (void)triggerWithHandler:(KATTriggerHandler)handler;
+- (void)triggerWithHandler:(KATTriggerHandler _Nonnull)handler;
 
 
 /**
@@ -131,7 +120,7 @@ typedef void(^KATDebugHandler)(id result);
  * @return void
  * @since v1.0
  */
-- (void)debugWithHandler:(KATDebugHandler)handler;
+- (void)debugWithHandler:(KATDebugHandler _Nonnull)handler;
 
 
 /**
@@ -143,7 +132,7 @@ typedef void(^KATDebugHandler)(id result);
  * @return void
  * @since v1.1.4
  */
-- (void)trackEvent:(KATTrackingEvent)event payload:(id)data;
+- (void)trackEvent:(KATTrackingEvent)event payload:(id _Nullable)data;
 
 
 /**
