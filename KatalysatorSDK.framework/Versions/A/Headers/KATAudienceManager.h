@@ -17,6 +17,22 @@
 typedef void(^KATAudienceHandler)(NSDictionary * _Nullable audiences,  NSError * _Nullable error);
 
 
+/**
+ * KATTagResponseFormat gives the option to retrieve the response tags in a specific format
+ *
+ */
+typedef NS_OPTIONS(NSUInteger, KATTagResponseFormat) {
+    /** The KATTagResponseFormatFlat returns the tag in a flat array
+     * @since v1.9.4
+     */
+    KATTagResponseFormatFlat = 1,
+    /** The KATTagResponseFormatMap returns the tags in a dictionary format
+     * @since v1.9.4
+     */
+    KATTagResponseFormatMap = 2,
+};
+
+
 @interface KATAudienceManager : NSObject
 
 
@@ -51,6 +67,15 @@ typedef void(^KATAudienceHandler)(NSDictionary * _Nullable audiences,  NSError *
  * @since v1.5.4
  */
 - (void)audiencesAndGeotagsWithCompletion:(KATAudienceHandler _Nullable)completion;
+
+
+/**
+ * Get the latest local tags
+ *
+ * @return dictionary or array of tags containing list and mapped tags
+ * @since v1.9.4
+ */
+- (id _Nullable)cachedTags:(KATTagResponseFormat)format;
 
 
 /**
@@ -96,5 +121,15 @@ typedef void(^KATAudienceHandler)(NSDictionary * _Nullable audiences,  NSError *
  * @since v1.8.2
  */
 + (NSString * _Nullable)toQueryString:(NSDictionary * _Nonnull)kv;
+
+
+/**
+ * Utility method to check if headphones are conntected
+ *
+ * @return bool
+ * @since v1.9.3
+ */
++ (BOOL)hasHeadphonesConnected;
+
 
 @end

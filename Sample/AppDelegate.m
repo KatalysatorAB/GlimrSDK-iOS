@@ -36,8 +36,11 @@
     NSUUID *apiToken = [[NSUUID alloc] initWithUUIDString:GLIMR_API_TOKEN];
 
     KATAudienceManager *audienceManager = [[KATAudienceManager alloc] initWithApiToken:apiToken];
+    
+    NSLog(@"Cached tags %@", [audienceManager cachedTags:KATTagResponseFormatFlat]);
+    
     [audienceManager audiencesAndGeotagsWithCompletion:^(NSDictionary *audiences, NSError *error) {
-        NSLog(@"AUDIENCES %@", audiences);
+        NSLog(@"Tags %@", audiences);
     }];
 }
 
